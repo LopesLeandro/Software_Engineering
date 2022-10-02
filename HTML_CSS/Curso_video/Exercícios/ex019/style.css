@@ -1,0 +1,52 @@
+/*
+ No CSS o ID é # 
+ No CSS o class é . 
+
+ Class eu uso para vários elementos
+ ID eu uso quando é uma personalização única
+*/
+
+@font-face {
+    font-family: 'SF Bold';
+    src: url('fonts/SFPRODISPLAYBOLD.OTF') format(opentype);
+}
+@font-face {
+    font-family: 'SF Regular';
+    src: url(fonts/SFPRODISPLAYREGULAR.OTF);
+}
+
+body{
+    font-family: 'SF Regular';
+    background-color: #fefae0;
+    color: #283618;
+}
+
+h1{
+    color: #bc6c25;
+}
+
+h1#principal{
+    text-align: center;
+    background-color: rgba(40, 54, 24);
+    color: #fefae0;
+}
+
+h2{
+    color: #dda15e;
+}
+
+.basico{
+    color: #b2bc25;
+}
+
+.intermediario{
+    color: #d8a61d;
+}
+
+.avancado{
+    color: #ffffff;
+}
+
+.destaque{
+    background-color: #bc6c25;
+}

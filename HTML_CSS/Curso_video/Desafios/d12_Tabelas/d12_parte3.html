@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do boletim</title>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        background-color: midnightblue;
+    }
+    main{
+        height: 100vh;
+        width: 900px;
+        margin: 200px;
+        background-color: rgb(245, 245, 245);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        
+    }
+
+    section{
+        width: 700px;
+        height: 500px;
+        position: relative;
+        background-color: black;
+    }
+    table{
+        width: 600px;
+        height: 400px;    
+        border-collapse: collapse;
+        background-color: white;
+        margin: auto;
+        margin-top: 50px;
+        align-content: center;
+        border: 25px solid rgb(255, 0, 0);
+        
+    }
+
+    thead > tr > th{
+        background-color: lightgoldenrodyellow;
+        text-align: center;
+        border: 1px solid peru;
+    }
+    tbody > tr > th{
+        border: 1px solid peru;
+        background-color: lightgoldenrodyellow;
+        text-align: left;
+        
+    }
+
+    tfoot > tr > th{
+        border: 1px solid peru;
+        background-color: lightgoldenrodyellow;
+        text-align: left;
+
+    }
+    
+    td{
+        border: 1px solid peru;
+        text-align: center;
+    }
+    .tipo{
+        font-weight: bolder;
+    }
+
+    .disciplinas{
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .Mfinal{
+        text-align: center;
+    
+    }
+</style>
+</head>
+<body>
+    <main>
+    
+    <section>
+        <table>
+            <thead>
+                <tr>
+                <th rowspan="2">Área</th>
+                <th rowspan="2">Disciplinas</th>
+                <th colspan="2">Notas</th>
+                <th rowspan="2">Média</th>
+                </tr>
+                <tr>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4" class="tipo">Exatas</td>
+                    <td class="disciplinas">Matemática</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td class="disciplinas">Física</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td class="disciplinas">Química</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td class="disciplinas">Biologia</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <th colspan="4">
+                        Média de exatas
+                    </th>
+                    <th class="Mfinal">
+                        0.0
+                    </th>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="tipo">Humanas</td>
+                    <td class="disciplinas">História</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td class="disciplinas">Geografia</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="4">
+                        Média de Humanas
+                    </th>
+                    <th class="Mfinal">0.0</th>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+    </main>
+</body>
+</html>

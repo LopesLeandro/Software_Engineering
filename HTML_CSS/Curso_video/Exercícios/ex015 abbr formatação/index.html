@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Formatação de textos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br>
+    <a href="page2.html">Page 2</a>
+    <a href="page3.html">Page 3</a>
+    <img src="cursoemvideocabeca.jpeg" alt="Cabeçalho">
+    
+    <h1>Principais formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    <p>Jeito não semântico:</p>
+    <p>Nessa frase temos um <b>termo em negrito</b> usando a tag &lt;b&gt;</p>
+    <p><i>Nessa frase temos um texto em itálico não semântico, usando a tag &lt;i&gt;</i></p>
+    <p>Jeito semântico de ser:</p>
+    <p>Nessa frase temos um <strong>termo em negrito</strong> usando a tag &lt;strong&gt;</p>
+    <p>Nessa frase temos um <em> texto em destaque</em> no jeito semântico de ser, usando a tag &lt;em&gt;</p>
+
+    <p>Outros jeitos de marcar texto com base no pdf.</p>
+    <p><mark>Você sabe usar marca texto?</mark> Basta usar a tag &lt;mark&gt;.</p>
+    <p>Você pode <mark style="background-color: blueviolet; color: aliceblue;">mudar as cores das marcações</mark>, mas é necessário usar CSS dentro da tag &lt;style&gt; direto na linha ou dentro das tags &lt;HEAD&gt;</p>
+
+    <p><del>Texto deletado</del>, basta usar a tag &lt;del&gt;</p>
+    <p><ins>Texto inserido, que é o exato oposto do anterior, usamos a tag</ins> &lt;ins&gt;.</p>
+    <p>E texto sobrescrito e subscrito, como os casos de x<sup>2</sup> ou H<sub>2</sub>O? Para isso usamos as tags &lt;sup&gt; ou &lt;sub&gt; respectivamente.</p>
+    <h1>Código fonte e pré-formatação</h1>
+    <h2>Exemplo de código em Python</h1>
+    <pre><code>
+        num = int(input('Digite um número'))
+        if num % 2 == 0:
+            print (f'0 número {num} é par')
+        else:
+            print(f'0 número {num} é impar')
+        print('Fim do programa!')
+    </code></pre>
+    Usamos as tags &lt;code&gt; e &lt;pre&gt; juntas, para dispor em letras monospace e também buscar a tabulação e espaçamentos determinados no código.
+    <hr>
+    <h1>Citações</h1>
+    <p><q>Criar uma citação em HTML, podemos usar a tag &lt;q&gt; (do Inglês quote, que significa citar). O texto que estiver entre &lt;q&gt; já vai receber automaticamente as aspas, mas não terá nenhum deslocamento. Essa técnica é mais usada quando queremos uma citação no meio de um parágrafo.</q></p>
+
+    <blockquote cite="http://www.krona.com.br">Também podemos criar citações mais longas (em bloco) e que tenham um parágrafo só para si. Nesse caso, colocaremos tudo dentro de &lt;blockquote&gt; e o texto ganha um recuo automaticamente. Podemos também colocar um link para o texto original, usando o parâmetro cite dentro da tag.</blockquote>
+
+    <p>Eu estou estudando <abbr title="Hyper Text Markup Language">HTML</abbr> para integrar e ser possível agilizar as aplicações em <abbr title="Gestão de Riscos Corporativos">GRC</abbr> aos conhecimentos</p>
+
+<img src="nakedrun-1200.jpg" alt="rodapé">
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: bisque;
+        }
+        header{
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav{
+            background-color: azure;
+            padding: 3px 20px;
+            box-shadow: 4px 3px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        nav > a {
+            text-decoration: none;
+            padding: 3px 20px;
+        }
+
+        nav > a:hover{
+            background-color: blue;
+            color: aliceblue;
+            padding: 3px 20px;
+
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px 5px 50px 5px;
+        }
+        footer{
+            background-color: rgb(24, 51, 42);
+            color: aliceblue;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+        }
+
+        footer > p{
+            margin: 0px;
+            padding: 4px;
+        }
+
+        div#bola{
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            border-radius: 100px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="capa.jpg" alt="">
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícia sobre guerra</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores natus veritatis perferendis debitis iusto, facere dicta. Quod rerum culpa aperiam in. Eum, fugit ipsa. Inventore velit corporis hic non pariatur!</p>
+                <aside>
+                    <p>Artigo escrito por josé da silva</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por mim mesmo.</p>
+    </footer>
+    <div id="bola">
+    </div>
+</body>
+</html>

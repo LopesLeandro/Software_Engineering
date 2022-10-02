@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas responsivas</title>
+<style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    table, tr, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 0px 5px;
+    }
+    table > thead > tr{
+        background-color: bisque;
+    }
+    .colProduto{
+        background-color: bisque;
+    }
+
+    caption{
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 20px;
+    }
+    div#container{
+        overflow: auto;
+    }
+
+
+</style>
+
+</head>
+<body>
+    <h1>TABELAS RESPONSIVAS</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse eaque quibusdam deleniti sapiente alias libero commodi earum fuga, aperiam voluptate ea itaque explicabo natus laudantium illum cumque ducimus? Magnam, adipisci.</p>
+
+    
+    <div id="container">
+        <table>
+            <caption>Tabelas responsivas</caption>
+            <colgroup>
+            <col class="colProduto">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Janeiro</th>
+                    <th>Fevereiro</th>
+                    <th>Março</th>
+                    <th>Abril</th>
+                    <th>Maio</th>
+                    <th>Junho</th>
+                    <th>Julho</th>
+                    <th>Agosto</th>
+                    <th>Setembro</th>
+                    <th>Outubro</th>
+                    <th>Novembro</th>
+                    <th>Dezembro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Produto 1</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

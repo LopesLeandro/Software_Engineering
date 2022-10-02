@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+:root{
+    --font1: Arial, Helvetica, sans-serif;
+    --font2: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+*{ 
+    font-family: var(--font2);
+    font-size: 3vw;
+    margin: 0px;
+    padding: 0px;
+
+}
+html, body{
+    min-height: 100vh;
+    background-color: darkgray;
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1{
+    font-family: var(--font1);
+    font-size: 8vw;
+    font-variant: small-caps;
+    padding-top: 50px;
+   /* text-transform: uppercase;*/
+    
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh; 
+    line-height: 1.5em;
+    padding-left: 30px; 
+}
+
+section > p {
+    display: inline-block;
+    max-width: 50vw;
+    text-align: justify;
+}
+
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.247);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.252);
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(54, 54, 54);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.514 );
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section#img01{
+    background-image: url(img/audit.jpg);
+    background-position: center center;
+    
+}
+
+section#img02{
+    background-image: url(img/chess.jpg);
+    background-position: center center;
+    
+}
+
+section#img03{
+    background-image: url(img/location.jpg);
+    background-position: center center;
+    
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 10px;
+}
+

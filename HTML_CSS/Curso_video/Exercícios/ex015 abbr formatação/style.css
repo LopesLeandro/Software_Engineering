@@ -1,0 +1,24 @@
+@charset "UTF-8";
+mark {
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+a{
+    text-align: center;
+    padding: 8px;
+    background-color: blue;
+    color: white;
+    border-radius: 25px;
+}
+
+img{
+    padding-top: 0px;
+    min-width: 100%;
+    margin-top: 10px;    
+}
+
+body {
+    background-color:aliceblue;
+ 
+}
