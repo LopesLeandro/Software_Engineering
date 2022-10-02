@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1em;
+            color: white;
+            background-image: linear-gradient(to bottom, #40c9ff, #e81cff);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        nav{
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+ 
+        }
+        /*.btn-primary{
+            background-image: linear-gradient(to right, #40c9ff, #e81cff);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            border-radius: 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .btnbtn-primary:hover{
+            text-decoration: none;
+            color: white;
+        }*/
+        .nav-link{
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            color: white;
+            text-decoration: none;
+            text-shadow: 0 10px 20px #e81cff;
+        }
+        table{
+            margin-top: 30px;
+        }
+
+        thead, tbody{
+            color: white;
+        }
+
+        .btn-primary{
+            background-color: #ffffff79;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+        }
+
+        .btn-primary:hover {
+            background-color: #40c9ff;
+            border: 1px solid transparent;
+        }
+        .btn-danger{
+            background-color: #ff0303b1;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-top: 3px;
+        }
+
+        .paragrafo_submenu{
+            color: black;
+        }
+        h5 {
+            color: black;
+        }
+        footer{
+
+        }
+    </style>
+</head>
+<body>
+<a href="/cliente/novo" class="btn btn-primary">Nova atividade</a>
+<table class="table" id="clientes">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tarefa</th>
+            <th>Descrição</th>
+            <th>Vencimento</th>
+            <th>Prioridade</th>
+            <th>Responsável</th>
+            <th>Tag</th>
+            <th>Finalizada</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each listaclientes}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.tarefa}}</td>
+            <td>{{this.descricao}}</td>
+            <td>{{this.vencimento}}</td>
+            <td>{{this.prioridade}}</td>
+            <td>{{this.responsavel}}</td>
+            <td>{{this.tag}}</td>
+            <td>{{this.finalizada}}</td>
+            <td>
+                <a href="/clientes/alterar/{{this.id}}" class="btn btn-primary" class="btn_alterar">Alterar</a>
+                <button class="btn btn-danger js-delete"
+                        data-id="{{this.id}}">Excluir</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<div class="modal" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Excluir tarefa</h5>
+      </div>
+      <div class="modal-body">
+        <p class="paragrafo_submenu">Confirma a exclusão da tarefa?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" id="btnsim">Sim</button>
+        <button type="button" class="btn btn-secondary" id="btncancelar" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div> 
+</body>
+<script src="/js/jquery.min.js"></script>
+<script src="/public/site.js"></script>
