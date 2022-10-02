@@ -1,0 +1,125 @@
+body{
+    margin: auto;
+    width: 1312px;
+}
+.container_top {  
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "title title title title title . . buscar buscar buscar buscar btnbuscar ";
+    border: 1px solid black;
+}
+  
+.title { 
+    display: grid;
+    grid-area: title;
+    align-content: center;
+    margin: 5px;
+}
+
+h1{
+    width: 100%;
+}
+.buscar {
+    display: grid;
+    grid-area: buscar; 
+    align-content: center;
+}
+
+#txt_busca{
+    width: 95%;
+}
+
+.btnbuscar {
+    display: grid;
+    grid-area: btnbuscar; 
+    align-content: center;
+    margin: 5px;
+}
+
+#btn_buscar {
+    width: 100%;
+    background-color: #395DA2;
+    border: none;
+    color: white;
+    border-radius: 9px;
+    padding: 5px;
+}
+
+.container_main {  
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Left Left Left Left row1 row1 row1 row1  Right Right Right Right"
+      "Left Left Left Left row1 row1 row1 row1  Right Right Right Right"
+      "Left Left Left Left row2 row2 row2 row2  Right Right Right Right"
+      "Left Left Left Left row2 row2 row2 row2  Right Right Right Right"
+      "Left Left Left Left row3 row3 row3 row3  Right Right Right Right"
+      "Left Left Left Left row3 row3 row3 row3  Right Right Right Right";
+    border: 1px solid black;
+    border-top: none;
+}
+
+
+.Left { 
+    grid-area: Left; 
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+
+}
+  
+.row1 { 
+    
+    grid-area: row1; 
+    padding: 5px;
+    margin: 5px;
+    
+}
+.row2 { 
+    grid-area: row2;
+    padding: 5px;
+    margin: 5px;
+}
+.row3 { 
+    grid-area: row3;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+
+.Right { 
+    grid-area: Right;
+    padding: 5px;
+
+
+}
+
+
+article{
+    border: 1px solid black;
+}
+
+.voltar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    width: 60px;
+    height: 30px;
+}
+
+.conteudo_email{
+    padding: 5px;
+}

@@ -1,0 +1,17 @@
+div{
+    width: 360px;
+    padding: 10px 20px;
+    border: 1px solid purple;
+}
+
+p{
+    border: 2px dotted blue;
+    padding: 10px 20px;
+}
+
+.tres{
+    background-color: bisque;
+    position: absolute;
+    left: 90px;
+    top: 125px;
+}
