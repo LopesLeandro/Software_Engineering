@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: #000;
+            color: white;
+            font: normal 15pt Arial;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id='tit'> Iniciando estudos com DOM</h1>
+    <p> Aqui vai o resultado</p>
+    <div id='msg'>Clique em mim</div>
+    <p> Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+<script>
+    var p1 = window.document.getElementsByTagName('p')[1] //GET pega o elemento solicitado, neste caso o paragrafo 1
+    var corpo = window.document.body //busca o body e o coloca como variável
+    p1.style.color = 'green' //muda a cor do paragrafo 1
+    corpo.style.background = 'gray' //muda a cor de fundo usando variavel
+    window.document.write('Olá mundo <br/>') 
+    window.document.write(p1.innerText,'<br/>') //puxa o texto do 'p' sem formatação
+    window.document.write('<br/>', window.navigator.appName, '<br/>') //busca o nome do navegador
+    window.document.write(window.document.URL, '<br/>') //busca o servidor
+    document.write(p1.innerHTML) //busca o texto de 'p' com formatação HTML
+    var d = window.document.getElementById('msg') //busca um elemento pela ID criada, neste exemplo está em body{<div>}
+        d.style.background = 'red'
+        d.innerText = 'Estou aguardando......' //busca a variavel que foi atribuido do ID e modifica a mensagem anterior pela nova
+
+    window.document.getElementById('msg').innerText = 'Modifica diretamente sem precisar atribuir variável...'
+/* Para fazer a seleção por <name> ou <class> é só trocar a nomeação atual ID por NAME por exemplo, o mesmo para o outro.
+   Depois só usar as funções .getElementsByName/Class */ 
+
+   //AO INVES DISSO PODE-SE USAR
+   var t = window.document.querySelector('h1#tit') //usa # para selecionar ID e . para classe
+   t.style.color = 'gray'
+   t.style.background = 'white'
+
+
+
+
+</script>
+    
+</body>
+</html>
