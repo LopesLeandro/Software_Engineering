@@ -1,0 +1,190 @@
+@media screen and (max-width: 500px) {
+    h1, h2, p {
+        font-size: 1em;
+        padding: 10px;
+    }
+    #sobre{
+        font-size: 1em;
+    }
+    #servico_container{
+        display: grid; 
+        grid-template-columns: 1fr 5fr 1fr; 
+        grid-template-rows: 250px 250px;
+        gap: 0px 0px; 
+        grid-template-areas: 
+          ". box .";
+          margin-top: -75px;
+    }
+    
+    #servico_quad{
+        grid-area: box;
+        display: grid;
+        grid-template-columns: 250px 250px; 
+        grid-template-rows: 250px 250px 250px;
+        
+        
+    }
+    .servico_box{
+        display: grid;
+    }
+    
+    .color_servico_par{
+        background-color: var(--cor02);
+    }
+    
+    .color_servico_impar{
+        background-color: var(--cor01);
+    }
+    
+    a{
+        color: var(--cor06);
+    }
+  }
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    --cor01: #000000;
+    --cor02: #14213D;
+    --cor03: #E46E01;
+    --cor04: #FCA311;
+    --cor05: #E5E5E5;
+    --cor06: #FFFFFF;
+}
+
+/*MENU*/
+.container_topo{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: 90px 1fr 1fr;
+    background-color: rgba(20, 33, 62, 0.352);
+    backdrop-filter: blur(10px);
+    min-width: 400px;
+}
+img{
+    display: grid;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.container_menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 90px;
+    grid-auto-columns: 1fr; 
+    
+}
+
+.botao{
+    display: grid;
+    justify-content: center; 
+    align-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+.botao:hover{
+    background-color: rgba(228, 111, 1, 0.607);
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in;
+}
+.topo_titulo_imagem{
+    background-image: url(pexels-misael-garcia-1707823.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 400px;
+}
+
+header{
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: 1fr; 
+    grid-template-areas: 
+    "leftheader middleheader rightheader";  
+    color: white;
+    
+}
+
+#middleheader{
+    grid-area: middleheader;
+    margin-top: 10%;
+    padding-bottom: 14%;
+    
+}
+
+/*CORPO*/
+body{
+    min-width: 400px;
+    font-size: 1.2em;
+}
+
+.grid_sobre{
+    display: grid; 
+    grid-template-columns: 1fr 3fr 1fr; 
+    grid-template-rows: 1fr;
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "SideL text SideR";
+  }
+
+/*SOBRE NÓS*/  
+#sobre{
+    grid-area: text;
+    justify-content: center; 
+    align-content: center;
+    text-align: justify;
+    margin-top: 7%;  
+    margin-bottom: 7%;
+    height: 100vh;
+}
+
+#SideL{ 
+    grid-area: 1 / 1 / 1 / 4;
+    background-color: #E5E5E5;
+}
+
+section > p{
+    padding: 10px;
+}
+
+/*SERVIÇOS*/
+#servico_container{
+    display: grid; 
+    grid-template-columns: 1fr 5fr 1fr; 
+    grid-template-rows: 250px 250px;
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". box .";
+      margin-top: -75px;
+}
+
+#servico_quad{
+    grid-area: box;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px; 
+    grid-template-rows: 250px 250px;
+    
+    
+}
+.servico_box{
+    display: grid;
+    grid-auto-flow:dense;
+}
+
+.color_servico_par{
+    background-color: red;
+}
+
+.color_servico_impar{
+    background-color: var(--cor05);
+}
+
+a{
+    color: var(--cor06);
+}
+/*TEMPORÁRIO*/
