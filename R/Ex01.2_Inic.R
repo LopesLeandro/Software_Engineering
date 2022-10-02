@@ -1,0 +1,5 @@
+resposta_a <- signif(4.5678,3)
+resposta_b <- round(234.598,2)
+resposta_c <- ceiling(23.547)
+resposta_d <- floor(45.645)
+resposta_e <- trunc(45.645)
