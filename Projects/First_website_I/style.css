@@ -4,27 +4,40 @@
 }
 
 .main {
-    width: 1200px;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(img/landscape.jpg);
+    width: 100vw;
+    height: 109vh;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(img/backimage.jpg);
     background-position: center;
     background-size: cover;
+}
+
+.body {
+    width: 1200px;
     height: 109vh;
+    margin: auto;
 }
 
 .navbar {
     width: 1200px;
-    height: 80px;
+    height: 70px;
     margin: auto;
-    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+}
+
+.nav_bg {
+    width: 100vw;
+    height: 70px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.6);
     top: 0;
     left: 0;
     z-index: 100;
 }
-
 .icon {
     width: 200px;
     float: left;
-    height: 80px;
+    height: 70px;
 }
 
 .logo {
@@ -38,7 +51,7 @@
 
 .menu {
     width: 400px;
-    height: 80px;
+    height: 70px;
     float: left;
 }
 
@@ -165,7 +178,7 @@ ul li a:hover {
 .form {
     width: 250px;
     height: 380px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    background: linear-gradient(to top, rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6)50%);
     position: absolute;
     top: -20px;
     left: 870px;
@@ -174,15 +187,18 @@ ul li a:hover {
 }
 
 .form h2 {
-    width: 220px;
+    width: 282px;
     font-family: sans-serif;
     text-align: center;
     color: #ff7200;
     font-size: 22px;
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px 10px 0px 0px;
+    margin-top: -24px;
+    margin-left: -24px;
     padding: 8px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .form input {
