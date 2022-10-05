@@ -9,7 +9,10 @@ e.	Qual o custo total de cada armazém
 '''
 
 dados = [[0] * 3 for i in range(5)]
-produtos = [0] * 3
+produtos = [0] * 4
+maior_prod2 = 0
+custo = [0] * 4
+custo_armazem = [0] * 4
 
 for col in range(3):
     for lin in range(5):
@@ -17,21 +20,33 @@ for col in range(3):
             dados[4][col] = int(input(f'Informe o custo do produto: {col + 1}'))
         else:
             dados[lin][col] = int(input(f'Informe a quantidade do produto {col + 1} no armazém {lin + 1}: '))
-    #    dados[i][5] += dados[i][j]
+            qnt_item = dados[lin][col]
+            if dados[lin][1] > maior_prod2:
+                maior_prod2 = dados[lin][1]
+                armazem_prod2 = lin + 1
+            custo[lin] += dados[4][col]
+            custo_armazem[lin] += qnt_item * dados[4][col]
 
+for lin in range(4):
+    for col in range(3):
+        produtos[lin] += dados[lin][col]
+
+
+print('a) Cada armazém possui:', produtos, 'itens.')
+print('b) O armazém com maior estoque do produto 2 é o armazém:', armazem_prod2)
+print('c) O armazém com menor estoque é o armazém:', produtos.index(min(produtos)) + 1)
+print('d) O custo total de cada produto é:', dados[4])
+print('e) O custo total de cada armazém é:', custo_armazem)
+#print('e) O custo total de cada armazém é:', produtos * dados[4])
 
 #    dados[5][col] = int(input('Informe o custo do produto: '))
 
-
+'''
 for i in range(5):
     for j in range(3):
         print(dados[i][j], end=' \t')
     print()
-
-
-
-
-
+'''
 
 
 '''
