@@ -1,17 +1,48 @@
 '''
-3)	Faça um programa que receba o estoque atual de três produtos que estão armazenados em quatro armazéns e coloque esses dados em uma matriz 5x3. Sendo que a última linha da matriz contém o custo 
-de cada produto, calcule e mostre:
+3)	Faça um programa que receba o estoque atual de três produtos que estão armazenados em quatro armazéns e coloque esses dados em uma matriz 5x3. Sendo que a última 
+linha da matriz contém o custo de cada produto, calcule e mostre:
 a.	A quantidade de itens  armazenas em cada armazém
 b.	Qual o armazém possui maior estoque do produto 2;
 c.	Qual o armazém possui menor estoque
 d.	Qual o custo total de cada produto
 e.	Qual o custo total de cada armazém
 '''
+dados = [[0] * 3 for i in range(5)]
+armazem = [0] * 4
+maior_produto = 0
+custo_armazem = [0] * 4
+contador = 0
 
+#Constroi a matriz facilmente para teste:
+for lin in range(5):
+    for col in range(3):
+        dados[lin][col] = contador
+        print(dados[lin][col], end=' \t')
+        contador += 1
+    print()
+
+#Matriz solicitando informações conforme enunciado do exercício:
+#------------------------------------------------------------#
+
+#Quantidade em cada armazem e o que tem maior estoque do produto 2:
+for lin in range(4):
+    soma_produto = 0
+    for col in range(3):
+        soma_produto += dados[lin][col]
+        if dados[lin][1] > maior_produto:
+            maior_produto = dados[lin][1]
+            armazem_maior = lin + 1
+    armazem[lin] = soma_produto
+print('a) O total de produtos em cada armazém é de ', armazem)
+print('b) O armazém que tem o maior estoque do produto 2 é o', armazem_maior)
+
+
+
+'''
 dados = [[0] * 3 for i in range(5)]
 produtos = [0] * 4
 maior_prod2 = 0
-custo = [0] * 4
+custo = 0
 custo_armazem = [0] * 4
 
 for col in range(3):
@@ -24,8 +55,22 @@ for col in range(3):
             if dados[lin][1] > maior_prod2:
                 maior_prod2 = dados[lin][1]
                 armazem_prod2 = lin + 1
-            custo[lin] += dados[4][col]
-            custo_armazem[lin] += qnt_item * dados[4][col]
+
+for i in range(3):
+    for j in range(5):
+        print(dados[j][i], end='')
+    print()
+
+#for i in range(3):
+#    for j in range(4):
+#        custo += dados[4][i] * dados[j][i]
+#        custo_armazem[j] += dados[4][i] * dados[j][i]
+
+for lin in range(3):
+    for col in range(4):
+        
+      #  custo += dados[lin][5] * dados[lin][col]
+        custo_armazem[col] += produtos[col] * dados[lin][4]
 
 for lin in range(4):
     for col in range(3):
@@ -41,7 +86,7 @@ print('e) O custo total de cada armazém é:', custo_armazem)
 
 #    dados[5][col] = int(input('Informe o custo do produto: '))
 
-'''
+
 for i in range(5):
     for j in range(3):
         print(dados[i][j], end=' \t')
