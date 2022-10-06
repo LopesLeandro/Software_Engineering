@@ -190,9 +190,9 @@ ul li a:hover {
     width: 282px;
     font-family: sans-serif;
     text-align: center;
-    color: #ff7200;
+    color: #fff;
     font-size: 22px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: hsla(27, 100%, 50%, 0.8);
     border-radius: 10px 10px 0px 0px;
     margin-top: -24px;
     margin-left: -24px;
@@ -266,3 +266,78 @@ ul li a:hover {
     padding-bottom: 10px;
     text-align: center;
 }
+
+.social_icon a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social_icon ion-icon {
+    color: #fff;
+    font-size: 30px;
+    padding-left: 23px;
+    padding-top: 5px;
+    transition: .4s ease;
+}
+
+.social_icon ion-icon:hover {
+    color: #ff7200;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    /*On browser normal screen*/
+
+    .navbar {
+        width: 100%;
+        height: 100px;
+    }
+
+    ul {
+        margin-left: 30px;
+    }
+
+    ul li {
+        margin-left: 60px;
+    }
+
+    ul li a {
+        font-size: 1.6vw;
+    }
+
+    .search {
+        margin-top: 3px;
+        margin-left: 290px;
+    }
+
+    .srch {
+        height: 40px;
+        width: 190px;
+        font-size: 14px;
+    }
+
+    .btn {
+        height: 40px;
+        width: 80px;
+    }
+
+    .content {
+        width: 100%;
+    }
+    
+    .content h1, .content span {
+        font-size: 4.5vw;
+    }
+
+    .content .par {
+        width: 90%;
+        font-size: 1.5vw;
+    }
+
+    .content .cn {
+        width: 13%;
+        height: 3.5vw;
+        font-size: 1.8vw;
+    }
+}
+
