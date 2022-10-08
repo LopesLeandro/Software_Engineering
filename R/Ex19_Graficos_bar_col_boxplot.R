@@ -37,7 +37,7 @@ barplot(alunosprof,
         col = c('purple','red','orange','pink'), 
         density = 50)
 
-boxplot(alunosprof, 
+boxplot(alunosprof,
         main = 'Distribuição de matrícula de alunos e professores', 
         ylab = 'Número de matrículas',
         xlab = 'Matriculas',
