@@ -15,7 +15,7 @@ barplot(prof, names.arg = escola,
         main = 'Quantidade de professores',
         xlab = 'Instituição',
         ylim = c(0,2000),
-        col = 'purple',
+        col = c('purple','red','orange','pink'),
         # É possível também nomear as posições através do comando names( ) e aumentar a fonte do título e eixos
         cex.axis = 2,
         cex.names = 2,
@@ -24,5 +24,22 @@ barplot(prof, names.arg = escola,
         #names.arg = escola
 )
 
+alunosprof <- matrix(c(1751,1186,947,29, 1000, 1000, 1000, 1000), nrow = 4, byrow = TRUE)
+alunosprof
 
+dinnames (alunosprof) <- list(c('privada','publica','estadual','federal'), c('alunos','professores'))
+barplot(alunosprof, 
+        beside = TRUE, 
+        main = 'Distribuição de matrícula de alunos e professores', 
+        ylab = 'Número de matrículas',
+        xlab = 'Matriculas'
+        legend.text = rownames(alunosprof),
+        col = c('purple','red','orange','pink'), 
+        density = 50)
 
+boxplot(alunosprof, 
+        main = 'Distribuição de matrícula de alunos e professores', 
+        ylab = 'Número de matrículas',
+        xlab = 'Matriculas',
+        col = c('purple','red','orange','pink'), 
+        density = 50)
