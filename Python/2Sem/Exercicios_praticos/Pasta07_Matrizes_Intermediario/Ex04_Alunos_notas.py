@@ -4,9 +4,6 @@ Mostre um relatório com o número do aluno (número da linha) e a prova em que 
 Ao final do relatório, mostre quantos alunos tiveram menor nota na prova 1, quantos alunos tiveram menor nota na prova 2 e quantos alunos tiveram menor nota na prova 3.
 '''
 
-from pickle import FALSE, TRUE
-
-
 table = [[0] * 3 for i in range(11)]
 #armazem = [0] * 4
 #maior_produto = 0
@@ -15,15 +12,15 @@ table = [[0] * 3 for i in range(11)]
 contador = 0
 linha = -1
 
-#Constroi a matriz facilmente para teste:
+#Constroi a matriz
 for lin in range(10):
     linha += 1
     for col in range(3):
             table[lin][col] = int(input(f'Digite a nota da prova {col+1} do aluno {linha+1}: '))
     print()
 
-linha = -1
-for lin in range(11):
+linha = 0
+for lin in range(10):
     linha += 1
     if linha >= 1:
         print('A:',linha, end=' \t |')
@@ -40,7 +37,7 @@ for lin in range(11):
 
 
 def menor_nota ():
-    linha = 1
+    linha = 0
     alunos_prova_1 = 0
     alunos_prova_2 = 0
     alunos_prova_3 = 0
@@ -52,19 +49,19 @@ def menor_nota ():
             if table[lin][col] < menor_nota:
                 menor_nota = table[lin][col]
                 coluna = col + 1
-            if coluna == 1:
-                alunos_prova_1 += 1
-            if coluna == 2:
-                alunos_prova_2 += 1
-            if coluna == 3:
-                alunos_prova_3 += 1
-                
+        if coluna == 1:
+            alunos_prova_1 += 1
+        if coluna == 2:
+            alunos_prova_2 += 1
+        if coluna == 3:
+            alunos_prova_3 += 1
+            
 
 
         print(f'O aluno {linha} teve a menor nota na prova {coluna}')
     print(f'Alunos com menor nota na prova 1: {alunos_prova_1}')
     print(f'Alunos com menor nota na prova 2: {alunos_prova_2}')
-    print(f'Alunos com menor nota na prova 2: {alunos_prova_3}')
+    print(f'Alunos com menor nota na prova 3: {alunos_prova_3}')
     #print(f'O número de alunos com a menor nota na prova 1 é {s_prova[0]} , na prova 2 foram {s_prova[1]}, e na prova 3 foram {s_prova[2]}')
     
     
