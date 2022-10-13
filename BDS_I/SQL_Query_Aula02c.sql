@@ -1,3 +1,5 @@
+CREATE DATABASE MinhaCaixa
+
 USE MinhaCaixa 
 
 SELECT * FROM Clientes AS Cli --As linhas onde o sexo é masculino e todas as colunas
