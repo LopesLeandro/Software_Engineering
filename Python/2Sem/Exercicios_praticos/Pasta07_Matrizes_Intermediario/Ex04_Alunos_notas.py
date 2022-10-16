@@ -19,14 +19,14 @@ for lin in range(10):
             table[lin][col] = int(input(f'Digite a nota da prova {col+1} do aluno {linha+1}: '))
     print()
 
-linha = 0
-for lin in range(10):
+linha = -1
+for lin in range(11):
     linha += 1
     if linha >= 1:
         print('A:',linha, end=' \t |')
     else:
         print('Prova:', end=' \t |')
-    menor_nota = 10
+ #   menor_nota = 10
     for col in range(3):
         if lin == 0:
             print(col + 1, end='\t')

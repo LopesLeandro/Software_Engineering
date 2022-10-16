@@ -1,3 +1,3 @@
-''''
-Imagine a world 
-'''
+CREATE DATABASE Registration;
+
+CREATE TABLE Peoples;
