@@ -1,5 +1,6 @@
 ''''
-1)	Faça uma função que receba três números inteiros: a,b e c, onde a é maior que 1. A função deve somar todos os inteiros entre b e c que sejam divisíveis por a (inclusive b e c) e retornar o resultado para a função principal.
+1)	Faça uma função que receba três números inteiros: a,b e c, onde a é maior que 1. 
+A função deve somar todos os inteiros entre b e c que sejam divisíveis por a (inclusive b e c) e retornar o resultado para a função principal.
 '''
 def f (a:int,b:int,c:int):
     soma = 0
