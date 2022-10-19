@@ -1,0 +1,3 @@
+SELECT * FROM Clientes
+WHERE ClienteBairro in 
+('CENTRO', 'FLORESTA', 'ATIRADORES')
