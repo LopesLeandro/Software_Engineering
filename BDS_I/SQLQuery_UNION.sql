@@ -1,3 +1,3 @@
-SELECT * FROM Clientes WHERE ClienteNome = 'Jon'
+SELECT ClienteNome, ClienteSobrenome, ClienteRendaAnual FROM Clientes WHERE ClienteNome = 'Jon'
 UNION
-SELECT * FROM Clientes WHERE ClienteNome = 'Jon'
+SELECT ClienteSobrenome, ClienteNome, NULL AS ClienteRendaAnual FROM Clientes WHERE ClienteNome = 'Jon'
