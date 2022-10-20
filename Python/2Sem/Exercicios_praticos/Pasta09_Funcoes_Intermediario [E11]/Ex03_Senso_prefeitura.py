@@ -12,14 +12,19 @@ def habitantes():
     num_habitantes = int(input('Digite o número de habitantes: '))
     return num_habitantes
 
-#FUNÇÃO COLETA SALARIO E NÚMERO DE FILHOS
+#FUNÇÃO COLETA SALARIO E NÚMERO DE FILHOS E
+#FUNÇÃO QUE CALCULA O PERCENTUAL DE PESSOAS COM SALÁRIO SUPERIOR A R$ 350,00
 def dados(num_habitantes):
     salario = []
     filhos = []
+    conta_salario_maior = 0
     for i in range(num_habitantes):
         salario.append(float(input('Digite o salário: R$ ')))
+        if salario[i] > 350:
+            conta_salario_maior += 1
         filhos.append(int(input('Digite quantidade de filhos: ')))
-    return salario, filhos
+    percentual_maior = conta_salario_maior / num_habitantes * 100
+    return salario, filhos, conta_salario_maior, percentual_maior
 
 
 #FUNÇÃO QUE CALCULA A MÉDIA DE SALÁRIO DA POPULAÇÃO E A MÉDIA DO NÚMERO DE FILHOS
@@ -41,15 +46,21 @@ def f_maior_salario(salario, num_habitantes):
             maior = salario[i]
     return maior
 
-#FUNÇÃO QUE CALCULA O PERCENTUAL DE PESSOAS COM SALÁRIO SUPERIOR A R$ 350,00
 
-#FUNÇÃO PRINCIPAL QUE IMPRIME E ORGANIZA AS FUNÇÕES
+
+#FUNÇÃO PRINCIPAL QUE IMPRIME E ORGANIZA AS FUNÇÕES E IMPRIME TUDO
 def senso():
     num_habitantes = habitantes()
-    salario, filhos = dados(num_habitantes)
+    salario, filhos, conta_salario_maior, percentual_maior = dados(num_habitantes)
     media_salario, media_filhos = f_media(salario, filhos, num_habitantes)
     maior_salario = f_maior_salario(salario, num_habitantes)
-    print(salario, filhos, media_salario, floor(media_filhos), maior_salario.__format__('.2f'))
+    #print(salario, filhos, media_salario, floor(media_filhos), maior_salario.__format__('.2f'), percentual_maior)
+    print('A lista de valor de salários coletados: ', salario)
+    print('A lista de quantidade de filhos coletados: ', filhos)
+    print('A média de salário da população é de R$ {:.2f}'.format(media_salario))
+    print('A média do número de filhos é de ', floor(media_filhos))
+    print('O maior salário é de R$ {:.2f}'.format(maior_salario))
+    print('O percentual de pessoas com salário superior a R$ 350,00 é de {:.2f}%'.format(percentual_maior))
 
 #IMPRIME TUDO
 senso()
