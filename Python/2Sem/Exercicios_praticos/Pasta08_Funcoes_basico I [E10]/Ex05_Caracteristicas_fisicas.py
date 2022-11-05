@@ -49,3 +49,42 @@ sexo, olhos, cabelos, idade = f_pessoas_dados()
 print('a) Média de idade das pessoas com olhos castanhos e cabelos pretos: ', f_media_idade(olhos, cabelos, idade))
 print('b) Maior idade entre os habitantes: ', f_maior_idade(idade))
 print('c) Quantidade de indivíduos do sexo feminino cuja idade está entre 18 e 35 (inclusive) e que tenham olhos azuis e cabelos louros: ', f_fem_azul_louros_idade(sexo, olhos, cabelos, idade))
+
+# METODO PROFESSOR ABAIXO
+'''
+sexo = [''] * 5
+corolho = [''] * 5
+corcabelo = [''] * 5
+idade = [0] * 5
+
+def lerdados():
+    for i in range(5):
+        print('Digite o sexo da pessoa [M/F]')
+        sexo[i] = input()
+        print('Digite a cor do olho [A-Azuis] [C-Castanhos]')
+        corolho[i] = input()
+        print('Digite a cor do cabelo [L-Louro] \
+            [P-Preto] [C-Castanho]')
+        corcabelo[i] = input()
+        print('Digite a idade')
+        idade[i] = int(input())
+
+def media1():
+    soma = 0
+    conta = 0
+    global corolho
+    global corcabelo
+    global idade
+    for i in range(5):
+        if (corolho[i] == 'C' or corolho[i] == 'c') and \
+            (corcabelo[i] == 'P' or corcabelo[i] == 'p'):
+            soma += idade[i]
+            conta += 1
+    media = soma / conta
+    return media
+
+if __name__ == "__main__":
+    lerdados()
+    guardarmedia = media1()
+    print(f'A media é {guardarmedia}')
+'''
