@@ -1,0 +1,5 @@
+-- DISCOVERY AGE
+
+SELECT ClienteNome, 
+YEAR(GETDATE()) - YEAR(ClienteNascimento) AS AGE
+FROM Clientes
