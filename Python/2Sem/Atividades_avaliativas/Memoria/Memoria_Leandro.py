@@ -65,30 +65,33 @@ while(opcao != 4):
             if(opcao == 3):
                 #Implemente aqui a lógica da pior escolha
                 i=0
-                tamanho_ini = 0
-                novo_ini = 0
+                maior = 0
                 while i < 100:
                     if cabecinha[i] == " ":
-                        #Encontra o primeiro espaço vazio
-                        #Procura o primeiro espaço preenchido
-                        
-                        ini = i 
-                        j=ini+1
-                        
+                        ini = i
+                        j= ini + 1
                         while j < 100:
-                            
                             if cabecinha[j] != " ":
                                 fim = j
-                                tamanho = fim - ini
-                                break
-                            j += 1
-                            if tamanho >= tamanho_ini:
-                                tamanho_ini = tamanho
-                                posicao = j - tamanho
+                                espaco = fim - ini
+
+                                if espaco > maior:
+                                    maior = espaco
+                                    global inicio
+                                    inicio = ini
+                                    fim = j
                         
-                                
+
+                            j += 1
+
                     i += 1
-                cabecinha[posicao] = letra
+                    
+                    for cont in range(inicio,inicio+tamanho):
+                        cabecinha[cont] = letra
+                
+              
+                    
+                    
 
                             #J=1
                         #pass
