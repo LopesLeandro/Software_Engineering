@@ -1,7 +1,7 @@
 import random
 
 #memoria = [' '] * 100
-cabecinha = [' ', ' ', 'x', 'x', 'x', ' ', 'x', ' ', ' ', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', ' ', ' ', 'x', ' ', 'x', 'x', 'x', ' ', ' ', ' ', ' ', ' ', 'x', 'x', ' ', ' ', ' ', 'x', ' ', ' ', 'x', ' ', 'x', 'x', 'x', 'x', 'x', ' ', ' ', ' ', 'x', 'x', 'x', ' ', 'x', ' ', 'x', 'x', 'x', 'x', 'x', 'x', ' ', 'x', 'x', ' ', 'x', ' ', 'x', ' ', ' ', ' ', 'x', 'x', 'x', ' ', 'x', 'x', ' ', ' ', ' ', ' ', 'x', ' ', 'x', 'x', 'x', ' ', ' ', ' ', 'x', 'x', ' ', 'x', 'x', 'x', 'x', 'x', 'x', ' ', 'x', 'x', 'x']
+cabecinha = [' ', ' ', 'x', 'x', 'x', ' ', 'x', ' ', ' ', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', ' ', ' ', 'x', ' ', 'x', 'x', 'x', ' ', ' ', ' ', ' ', ' ', 'x', 'x', ' ', ' ', ' ', 'x', ' ', ' ', 'x', ' ', 'x', 'x', 'x', 'x', 'x', ' ', ' ', ' ', 'x', 'x', 'x', ' ', 'x', ' ', 'x', 'x', 'x', 'x', 'x', 'x', ' ', 'x', 'x', ' ', 'x', ' ', 'x', ' ', ' ', ' ', 'x', 'x', 'x', ' ', 'x', 'x', ' ', ' ', ' ', ' ', 'x', ' ', 'x', 'x', 'x', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'x', 'x', ' ', ' ', 'x', ' ', ' ', ' ', 'x']
 opcao = 0
 tamanho = 0
 letra = ''
@@ -64,7 +64,39 @@ while(opcao != 4):
         else:
             if(opcao == 3):
                 #Implemente aqui a lógica da pior escolha
-                pass
+                i=0
+                tamanho_ini = 0
+                novo_ini = 0
+                while i < 100:
+                    if cabecinha[i] == " ":
+                        #Encontra o primeiro espaço vazio
+                        #Procura o primeiro espaço preenchido
+                        
+                        ini = i 
+                        j=ini+1
+                        
+                        while j < 100:
+                            
+                            if cabecinha[j] != " ":
+                                fim = j
+                                tamanho = fim - ini
+                                break
+                            j += 1
+                            if tamanho >= tamanho_ini:
+                                tamanho_ini = tamanho
+                                posicao = j - tamanho
+                        
+                                
+                    i += 1
+                cabecinha[posicao] = letra
+
+                            #J=1
+                        #pass
+                        #break
+
+                            
+                            
+                    
     # Aqui você deve imprimir todo o conteúdo da variável memória
     for i in range(0,20):
         print(cabecinha[i],end="|")
