@@ -62,33 +62,36 @@ while(opcao != 4):
             #Implemente aqui a lógica da melhor escolha
             pass
         else:
-            if(opcao == 3):
+
                 #Implemente aqui a lógica da pior escolha
                 i=0
-                maior = 0
+                #maior = 0
+                maior_espaco = 0
                 while i < 100:
                     if cabecinha[i] == " ":
                         ini = i
-                        j= ini + 1
+                        j = ini + 1
+                        
                         while j < 100:
                             if cabecinha[j] != " ":
                                 fim = j
                                 espaco = fim - ini
-
-                                if espaco > maior:
-                                    maior = espaco
-                                    global inicio
-                                    inicio = ini
-                                    fim = j
-                        
-
+                                if espaco > maior_espaco:
+                                    maior_espaco = espaco
+                                    pos_maior_ini = i
+                                    pos_maior_fim = j
+                                break
                             j += 1
-
+                            #i = j  
                     i += 1
-                    
-                    for cont in range(inicio,inicio+tamanho):
-                        cabecinha[cont] = letra
-                
+                print("Maior espaço: ", maior_espaco)
+                print("Posição do maior espaço: ", pos_maior_ini, pos_maior_fim) 
+                for cont in range(tamanho):
+                    cabecinha[pos_maior_ini+cont] = letra
+                #if (maior_fim - maior_ini) <= tamanho:
+                #for cont in range(maior_ini,maior_ini+tamanho):
+                #    cabecinha[cont] = letra
+            
               
                     
                     
