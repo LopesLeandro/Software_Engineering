@@ -62,7 +62,6 @@ while(opcao != 4):
             #Implemente aqui a lógica da melhor escolha
             pass
         else:
-
                 #Implemente aqui a lógica da pior escolha
                 i=0
                 #maior = 0
@@ -88,21 +87,7 @@ while(opcao != 4):
                 print("Posição do maior espaço: ", pos_maior_ini, pos_maior_fim) 
                 for cont in range(tamanho):
                     cabecinha[pos_maior_ini+cont] = letra
-                #if (maior_fim - maior_ini) <= tamanho:
-                #for cont in range(maior_ini,maior_ini+tamanho):
-                #    cabecinha[cont] = letra
-            
-              
-                    
-                    
 
-                            #J=1
-                        #pass
-                        #break
-
-                            
-                            
-                    
     # Aqui você deve imprimir todo o conteúdo da variável memória
     for i in range(0,20):
         print(cabecinha[i],end="|")
