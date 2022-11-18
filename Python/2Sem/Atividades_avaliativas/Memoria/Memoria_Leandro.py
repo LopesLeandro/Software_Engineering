@@ -56,15 +56,56 @@ while(opcao != 4):
                     for cont in range(ini,ini+tamanho):
                         cabecinha[cont] = letra
                     break
+                else:
+                    print('Tente uma informação menor, esta não cabe em lugar nenhum!')
+                    break
             i += 1
     else:
         if (opcao == 2):
             #Implemente aqui a lógica da melhor escolha
-            pass
+            i=0
+            melhor_espaco = 0
+            omenor = len(cabecinha)
+            espaco = 0
+            while i < 100:
+                if cabecinha[i] == " ":
+                    ini = i
+                    j = ini + 1
+                    
+                    while j < 100:
+                        if cabecinha[j] != " ":
+                            fim = j
+                            espaco = fim - ini
+                            
+                        if espaco >= tamanho:
+                            melhor_espaco = espaco
+                            pos_melhor_ini = i
+                            pos_melhor_fim = j
+                        
+                        if melhor_espaco < omenor:
+                            omenor = melhor_espaco
+                            omenor_ini = i
+                            omenor_fim = j
+                                    
+
+
+                        j += 1
+                    break
+                i += 1
+            print("Melhor espaço: ", melhor_espaco)
+            print("Posição do melhor espaço: ", omenor_ini, omenor_fim)
+            #if melhor_espaco >= tamanho:
+            for cont in range(0,tamanho):
+                cabecinha[omenor_ini+cont] = letra
+            break
+
+
+
+
+            
         else:
                 #Implemente aqui a lógica da pior escolha
                 i=0
-                #maior = 0
                 maior_espaco = 0
                 while i < 100:
                     if cabecinha[i] == " ":
@@ -75,6 +116,7 @@ while(opcao != 4):
                             if cabecinha[j] != " ":
                                 fim = j
                                 espaco = fim - ini
+                                
                                 if espaco > maior_espaco:
                                     maior_espaco = espaco
                                     pos_maior_ini = i
@@ -85,22 +127,39 @@ while(opcao != 4):
                     i += 1
                 print("Maior espaço: ", maior_espaco)
                 print("Posição do maior espaço: ", pos_maior_ini, pos_maior_fim) 
-                for cont in range(tamanho):
-                    cabecinha[pos_maior_ini+cont] = letra
-
-    # Aqui você deve imprimir todo o conteúdo da variável memória
-    for i in range(0,20):
-        print(cabecinha[i],end="|")
-    print()
-    for i in range(20,40):
-        print(cabecinha[i],end="|")
-    print()
-    for i in range(40,60):
-        print(cabecinha[i],end="|")
-    print()
-    for i in range(60,80):
-        print(cabecinha[i],end="|")
-    print()
-    for i in range(80,100):
-        print(cabecinha[i],end="|")
-    print()
+                if maior_espaco >= tamanho:
+                    for cont in range(tamanho):
+                        cabecinha[pos_maior_ini+cont] = letra
+                        # Aqui você deve imprimir todo o conteúdo da variável memória
+                    for i in range(0,20):
+                        print(cabecinha[i],end="|")
+                    print()
+                    for i in range(20,40):
+                        print(cabecinha[i],end="|")
+                    print()
+                    for i in range(40,60):
+                        print(cabecinha[i],end="|")
+                    print()
+                    for i in range(60,80):
+                        print(cabecinha[i],end="|")
+                    print()
+                    for i in range(80,100):
+                        print(cabecinha[i],end="|")
+                    print()
+                else:
+                    print('Tente uma informação menor, esta não cabe em lugar nenhum!')
+for i in range(0,20):
+    print(cabecinha[i],end="|")
+print()
+for i in range(20,40):
+    print(cabecinha[i],end="|")
+print()
+for i in range(40,60):
+    print(cabecinha[i],end="|")
+print()
+for i in range(60,80):
+    print(cabecinha[i],end="|")
+print()
+for i in range(80,100):
+    print(cabecinha[i],end="|")
+print()
