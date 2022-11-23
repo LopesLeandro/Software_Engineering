@@ -1,20 +1,11 @@
-USE MinhaCaixa;
--- count, count distinct, avg, max, min, sum
--- SELECT ClienteBairro,MovimentoValor FROM
+--Escreva uma consulta SQL que retorne o resultado abaixo com todos os bairros e quantidade de clientes de cada um:
 
--- SELECT ClienteBairro, SUM(MovimentoValor) AS Total
--- SELECT TOP 10 ClienteBairro, AVG(MovimentoValor) AS Total
-SELECT TOP 10 ClienteBairro, SUM(MovimentoValor) AS Total,
-COUNT(Clientes.ClienteCodigo) AS Quantidade
-FROM
-    Movimentos
+--Quantidade    |ClienteBairro
+--      134           |BOM RETIRO
+--      118           |CENTRO
+--      112           |COSTA E SILVA
 
-        INNER JOIN Contas ON (Movimentos.ContaNumero=Contas.ContaNumero)
+-- Path: BDS_I/SQLQuery_Class15.sql
+-- Compare this snippet from BDS_I/2022-11-17_Funcao_View_1_1.sql:
 
-        INNER JOIN Clientes ON (Contas.ClienteCodigo=Clientes.ClienteCodigo)
--- WHERE COUNT(Clientes.ClienteCodigo) > 200
-GROUP BY ClienteBairro
-HAVING COUNT(Clientes.ClienteCodigo) > 200
--- ORDER BY ClienteBairro
--- ORDER BY sum(MovimentoValor) DESC
-ORDER BY 2 DESC
+SELECT ClienteNome, ClienteBairro FROM Clientes
