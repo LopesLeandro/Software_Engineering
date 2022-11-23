@@ -1,31 +1,31 @@
 import random
 
-cabecinha = [' '] * 100
-#cabecinha = [' ', ' ', 'x', 'x', 'x', ' ', 'x', ' ', ' ', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', ' ', ' ', 'x', ' ', 'x', 'x', 'x', ' ', ' ', ' ', ' ', ' ', 'x', 'x', ' ', ' ', ' ', 'x', ' ', ' ', 'x', ' ', 'x', 'x', 'x', 'x', 'x', ' ', ' ', ' ', 'x', 'x', 'x', ' ', 'x', ' ', 'x', 'x', 'x', 'x', 'x', 'x', ' ', 'x', 'x', ' ', 'x', ' ', 'x', ' ', ' ', ' ', 'x', 'x', 'x', ' ', 'x', 'x', ' ', ' ', ' ', ' ', 'x', ' ', 'x', 'x', 'x', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'x', 'x', ' ', ' ', 'x', ' ', ' ', ' ', 'x']
+memoria = [' '] * 100
+#memoria = [' ', ' ', 'x', 'x', 'x', ' ', 'x', ' ', ' ', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', ' ', ' ', 'x', ' ', 'x', 'x', 'x', ' ', ' ', ' ', ' ', ' ', 'x', 'x', ' ', ' ', ' ', 'x', ' ', ' ', 'x', ' ', 'x', 'x', 'x', 'x', 'x', ' ', ' ', ' ', 'x', 'x', 'x', ' ', 'x', ' ', 'x', 'x', 'x', 'x', 'x', 'x', ' ', 'x', 'x', ' ', 'x', ' ', 'x', ' ', ' ', ' ', 'x', 'x', 'x', ' ', 'x', 'x', ' ', ' ', ' ', ' ', 'x', ' ', 'x', 'x', 'x', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'x', 'x', ' ', ' ', 'x', ' ', ' ', ' ', 'x']
 opcao = 0
 tamanho = 0
 letra = ''
 for i in range(100):
     if(random.randint(0,11) >= 5):
-        cabecinha[i] = 'x'
+        memoria[i] = 'x'
     else:
-        cabecinha[i] = ' '
+        memoria[i] = ' '
 
 #Aqui você deve imprimir todo o conteúdo da variável memória
 for i in range(0,20):
-    print(cabecinha[i],end="|")
+    print(memoria[i],end="|")
 print()
 for i in range(20,40):
-    print(cabecinha[i],end="|")
+    print(memoria[i],end="|")
 print()
 for i in range(40,60):
-    print(cabecinha[i],end="|")
+    print(memoria[i],end="|")
 print()
 for i in range(60,80):
-    print(cabecinha[i],end="|")
+    print(memoria[i],end="|")
 print()
 for i in range(80,100):
-    print(cabecinha[i],end="|")
+    print(memoria[i],end="|")
 print()
 
 #Inicio do loop do menu do programa
@@ -50,12 +50,12 @@ while(opcao != 4):
         i=0
         espaco = 0
         while i < 100:
-            if cabecinha[i] == " ": #inicia a localização da primeira casa vazia vazia
+            if memoria[i] == " ": #inicia a localização da primeira casa vazia vazia
                 ini = i 
                 j=ini+1
                 while j < 100:
                     
-                    if cabecinha[j] != " ": #procura primeiro indexador preenchido
+                    if memoria[j] != " ": #procura primeiro indexador preenchido
                         fim = j #coleta posição na lista 
                         espaco = fim - ini #new
                         break
@@ -63,7 +63,7 @@ while(opcao != 4):
                     j += 1
                 if (fim-ini) >= tamanho: #verifica se o espaço é suficiente para alocar a informação
                     for cont in range(ini,ini+tamanho): #Percorre entre o inicio e fim utilizando o inicio + o tamanho da informação para preencher a memoria
-                        cabecinha[cont] = letra #coloca a letra escolhida 
+                        memoria[cont] = letra #coloca a letra escolhida 
                     break
             i += 1
         if tamanho > espaco: #Se não tiver espaço em lugar algum ele invalida a tentativa e apresenta a mensagem
@@ -73,15 +73,15 @@ while(opcao != 4):
         #Implemente aqui a lógica da melhor escolha
         i=0
         melhor_espaco = 0
-        omenor = len(cabecinha) #o menor recebe a maior largura disponível, o tamanho da memória
+        omenor = len(memoria) #o menor recebe a maior largura disponível, o tamanho da memória
         espaco = 0
         while i < 100:
-            if cabecinha[i] == " ": #inicia a localização da primeira casa vazia vazia
+            if memoria[i] == " ": #inicia a localização da primeira casa vazia vazia
                 ini = i
                 j = ini + 1 #o próximo while não inicia em uma informação já conhecida
                 
                 while j < 100: #localiza a primeira casa preenchida
-                    if cabecinha[j] != " ": #procura primeiro indexador preenchido
+                    if memoria[j] != " ": #procura primeiro indexador preenchido
                         fim = j 
                         espaco = fim - ini #Armazena o tamanho do espaço
                             
@@ -102,18 +102,18 @@ while(opcao != 4):
             print('Tente uma informação menor, esta não cabe em lugar nenhum!')
         else:
             for cont in range(tamanho):
-                cabecinha[omenor_ini+cont] = letra
+                memoria[omenor_ini+cont] = letra
      
     if (opcao == 3):
         #Implemente aqui a lógica da pior escolha
         i=0
         maior_espaco = 0
         while i < 100:
-            if cabecinha[i] == " ":
+            if memoria[i] == " ":
                 ini = i
                 j = ini + 1
                 while j < 100:
-                    if cabecinha[j] != " ":
+                    if memoria[j] != " ":
                         fim = j
                         espaco = fim - ini
                         if espaco > maior_espaco: #a mesma lógica só que pegando o maior espaço para ser a pior opção
@@ -125,22 +125,22 @@ while(opcao != 4):
             i += 1
         if maior_espaco >= tamanho:
             for cont in range(pos_maior_ini,pos_maior_ini+tamanho):
-                cabecinha[cont] = letra
+                memoria[cont] = letra
         else:
             print('Tente uma informação menor, esta não cabe em lugar nenhum!')
 
     for i in range(0,20):
-        print(cabecinha[i],end="|")
+        print(memoria[i],end="|")
     print()
     for i in range(20,40):
-        print(cabecinha[i],end="|")
+        print(memoria[i],end="|")
     print()
     for i in range(40,60):
-        print(cabecinha[i],end="|")
+        print(memoria[i],end="|")
     print()
     for i in range(60,80):
-        print(cabecinha[i],end="|")
+        print(memoria[i],end="|")
     print()
     for i in range(80,100):
-        print(cabecinha[i],end="|")
+        print(memoria[i],end="|")
     print()
